@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FB">
+
+    <!-- MODERN BLUE HEADER YENYE BACK BUTTON -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#0D47A1"
+        android:gravity="center_vertical"
+        android:paddingTop="28dp"
+        android:paddingHorizontal="16dp"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_back_arrow"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="#FFFFFF"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <!-- SCROLLVIEW INAYOSOGEA VIZURI HATA KEYBOARD IKIWA WAZI -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Details"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#222222"/>
+
+            <TextView
+                android:id="@+id/tvRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room 15F"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="#303F9F"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/tvBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Block 4"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginTop="4dp"/>
+
+            <!-- SELECT BED SECTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Your Bed"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgBeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbBed1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Bed 1"/>
+
+                <RadioButton
+                    android:id="@+id/rbBed2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Bed 2"/>
+
+                <RadioButton
+                    android:id="@+id/rbBed3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Bed 3"/>
+
+                <RadioButton
+                    android:id="@+id/rbBed4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Bed 4"/>
+            </RadioGroup>
+
+            <!-- SELECT PAYMENT METHOD -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Payment Method"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgPaymentMethods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbBankPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Control Number / Bank Payment"/>
+
+                <RadioButton
+                    android:id="@+id/rbMobileMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Mobile Money (M-Pesa / HaloPesa / Tigo)"/>
+            </RadioGroup>
+
+            <!-- 1. BANK OPTIONS (DYNAMICALLY SHOWN) -->
+            <LinearLayout
+                android:id="@+id/layoutBankOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="#E8EAF6"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Bank:"
+                    android:textStyle="bold"
+                    android:textColor="#303F9F"/>
+
+                <Spinner
+                    android:id="@+id/spinnerBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Control Number:"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvControlNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="991234567890"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"
+                    android:padding="8dp"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
+            <!-- 2. MOBILE MONEY OPTIONS (DYNAMICALLY SHOWN) -->
+            <LinearLayout
+                android:id="@+id/layoutMobileOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="#E8F5E9"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Provider:"
+                    android:textStyle="bold"
+                    android:textColor="#2E7D32"/>
+
+                <Spinner
+                    android:id="@+id/spinnerMobileNetwork"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number:"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="07XXXXXXXX / 06XXXXXXXX"
+                    android:inputType="phone"
+                    android:background="#FFFFFF"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvFixedAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount to Pay: TZS 183,000"
+                    android:textStyle="bold"
+                    android:textColor="#D32F2F"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <!-- CONFIRM BUTTON -->
+            <Button
+                android:id="@+id/btnConfirmBooking"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="CONFIRM &amp; BOOK ROOM"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#303F9F"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

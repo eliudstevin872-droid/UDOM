@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/bg_dialog_rounded">
+
+    <!-- Icon ya Tiki Juu Katikati -->
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_check_circle"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Kichwa cha Ujumbe (Yenye ID sahihi) -->
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Successful!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#172B4D"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Ujumbe wa Maelezo (Yenye ID sahihi) -->
+    <TextView
+        android:id="@+id/tvDialogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your room has been allocated successfully."
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Kitufe cha OK -->
+    <Button
+        android:id="@+id/btnSuccessOk"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="OK"
+        android:backgroundTint="#2E7D32"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"/>
+
+</LinearLayout>

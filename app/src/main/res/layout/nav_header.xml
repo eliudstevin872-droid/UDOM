@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="#1976D2"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="bottom">
+
+
+    <TextView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:text="👤"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="10dp"/>
+
+
+    <TextView
+        android:id="@+id/tvNavName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John King"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/tvNavEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student@udom.ac.tz"
+        android:textColor="#E3F2FD"
+        android:textSize="13sp"
+        android:layout_marginTop="2dp"/>
+
+</LinearLayout>
